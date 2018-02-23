@@ -1,0 +1,26 @@
+<h3 *ngIf="!solicitud?.id">Nueva solicitud</h3>
+<h3 *ngIf="solicitud?.id">Solicitud {{solicitud.id}}</h3>
+
+<form (submit)="enviarSolicitud(solicitud)">
+
+  <p>
+    <label>Institucion</label>
+    <input type="text" [ngModel]="solicitud?.institucionNombre" (ngModelChange)="solicitud.institucionNombre = $event" name="institucion"/>
+  </p>
+
+  <p>
+    <label>Solicitante</label>
+    <input type="texte" [ngModel]="solicitud?.solicitanteNombre" (ngModelChange)="solicitud.solicitanteNombre = $event" name="solicitante"/>
+  </p>
+
+  <p>
+    <label>Estado</label>
+    <input type="text" [ngModel]="solicitud?.estadoNombre" (ngModelChange)="solicitud.estadoNombre = $event" name="estado"/>
+  </p>
+
+  <button type="submit">Enviar</button>
+  <button type="button" (click)="cancelar()">Cancelar</button>
+
+</form>
+
+

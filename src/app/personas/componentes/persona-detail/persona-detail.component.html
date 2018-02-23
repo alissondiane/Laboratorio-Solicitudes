@@ -1,0 +1,16 @@
+<h3 class="title">
+  Persona: {{persona.id}}
+  <div class="actions" *ngIf="editable">
+    <button [routerLink]="'/editarSolicitud/'+solicitud.id">editar</button>
+    <button (click)="eliminarSolicitud()">borrar</button>
+    <button (click)="atendersolicitud()">atender</button>
+  </div>
+</h3>
+<div class="content">
+  <p>
+    DNI: {{persona.id}}
+  </p>
+  <p>
+    SOLICITUDES: {{persona.solicitudes}}
+  </p>
+</div>
