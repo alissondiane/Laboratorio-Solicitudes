@@ -1,0 +1,22 @@
+<div class = "vista">
+  <h3 *ngIf="!institucion?.id">Nueva Institucion</h3>
+  <h3 *ngIf="institucion?.id">Institucion {{institucion.id}}</h3>
+
+  <form class = "grupo" (submit)="enviarInstitucion(institucion)">
+
+  <p>
+    <label>Nombre</label>
+    <input type="text" [ngModel]="institucion?.nombre" (ngModelChange)="institucion.nombre = $event" name="nombre"/>
+  </p>
+
+  <p>
+    <label>Direccion</label>
+    <input type="text" [ngModel]="institucion?.direccion" (ngModelChange)="institucion.direccion = $event" name="direccion"/>
+  </p>
+
+  <p style="text-align: center;">
+  <button type="submit">Enviar</button>
+  <button type="button" (click)="cancelar()">Cancelar</button>
+</p>
+  </form>
+</div>

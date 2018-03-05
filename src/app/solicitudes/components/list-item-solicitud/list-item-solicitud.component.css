@@ -1,0 +1,46 @@
+:host{
+  display: block;
+  border: solid 1px #444444;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  color:black;
+  font-family: 'Times New Roman', Times, serif;
+}
+:host>p{
+  margin: 0px;
+}
+:host>.title{
+  background-color:#204862 !important;
+  color: #f9f9f9 !important;
+  margin: 0px;
+  padding: 0.5em;
+  position: relative;
+  border-radius:5px 5px 0px 0px;
+
+}
+:host>.title>.actions{
+  display: inline;
+  position: absolute;
+  right: 0.5em;
+}
+:host>.content{
+  padding: 0.5em;
+}
+
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer; cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+label {
+  display: inline-block;
+  margin: .2em .5em;
+  color: #607D8B;
+  font-weight: bold;
+}
