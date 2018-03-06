@@ -1,0 +1,34 @@
+<div class="vista">
+<h3 *ngIf="!persona?.id">Nueva Persona</h3>
+<h3 *ngIf="persona?.id">Persona {{persona.id}}</h3>
+
+<form class = "grupo" (submit)="enviarPersona(persona)">
+
+  <p>
+    <label>Nombre</label>
+    <input type="text" [ngModel]="persona?.nombre" (ngModelChange)="persona.nombre = $event" name="nombre"/>
+  </p>
+
+  <p>
+    <label>Apellido</label>
+    <input type="text" [ngModel]="persona?.apellido" (ngModelChange)="persona.apellido = $event" name="apellido"/>
+  </p>
+
+  <p>
+    <label>DNI</label>
+    <input type="text" [ngModel]="persona?.dni" (ngModelChange)="persona.dni = $event" name="dni"/>
+  </p>
+  <p>
+    <label>Usuario</label>
+    <input type="text" [ngModel]="persona?.usuario" (ngModelChange)="persona.usuario = $event" name="usuario"/>
+  </p>
+  <p>
+    <label>Contraseña</label>
+    <input type="text" [ngModel]="persona?.contrasena" (ngModelChange)="persona.contrasena = $event" name="contrasena"/>
+  </p>
+<p style="text-align: center;">
+  <button type="submit">Enviar</button>
+  <button type="button" (click)="cancelar()">Cancelar</button>
+</p>
+</form>
+</div>

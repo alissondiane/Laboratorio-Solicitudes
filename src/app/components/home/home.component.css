@@ -1,0 +1,112 @@
+
+button {
+    width:80%;
+    margin-top: 20px;
+    font-family: Arial;
+    background-color: #cfd8dc;
+    color:black;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 9px;
+    cursor: pointer; cursor: hand;
+    font-size: 16px;
+  }
+  button:hover {
+    color: white;
+    background-color:rgb(11, 45, 61) ;
+  }
+input{
+    width:80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #607D8B;
+    border-radius: 9px;
+    box-sizing: border-box;
+    background-position: 2px 10px; 
+    background-repeat: no-repeat;
+    color:black;
+    font-size: 14px;
+}
+
+.texto{
+    width:280px;
+    height:280px;
+    color: white;
+    position:relative;
+    margin:0 auto;
+ }
+ .opacity{
+    background-color:gray;
+    color:white;
+    opacity: 0.2;
+    width:280px;
+    height:280px;
+    position:absolute;
+    border-radius:6px;
+    padding: 17px;
+ }
+div h1{
+    font-size: 2em;
+    color: white;
+    margin-bottom: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+div h2 {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0;
+    padding-top: 0;
+    color : white;
+}
+.vista1{
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 0px 0px 4px 4px;
+    margin:0 auto;
+}
+a{
+    color:white;
+}
+li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 4px;
+    font-family : 'Times New Roman', Times, serif;
+    background-color: #cfd8dc;
+    width: 80px;
+    text-align :left;
+  }
+li a:visited, a:link {
+    color: black;
+}
+li a:hover {
+    color: white;
+    background-color:#607D8B ;
+}
+
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    border-radius:4px 4px 0px 0px;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: lightblue;
+    color: black;
+}

@@ -1,0 +1,34 @@
+<div class="vista">
+<h3 *ngIf="!solicitud?.id">Nueva solicitud</h3>
+<h3 *ngIf="solicitud?.id">Solicitud {{solicitud.id}}</h3>
+
+<form class = "grupo" (submit)="enviarSolicitud(solicitud)">
+  <label for="select">Instituciones:</label>
+  <br>
+  <select id="select"
+  [ngModel]="solicitud?.institucionNombre" (ngModelChange)="solicitud.institucionNombre = $event" name="institucion"
+  >
+      <option *ngFor = "let g of instituciones"  
+                [value] = "g.nombre"> {{g.nombre}} 
+      </option>
+  </select>    
+  <p>
+    <label>Institucion:</label><br>
+    <input type="text" [ngModel]="solicitud?.institucionNombre"  name="institucion"/>
+  </p>
+  <p>
+    <label>Solicitante:</label>
+    <input type="text" [ngModel]="solicitud?.solicitanteNombre" (ngModelChange)="solicitud.solicitanteNombre = $event" name="solicitante"/>
+  </p>
+
+  <p>
+    <label>Estado:</label>
+    <input type="text" [ngModel]="solicitud?.estadoNombre" (ngModelChange)="solicitud.estadoNombre = $event" name="estado"/>
+  </p>
+  <p style="text-align: center;">
+  <button type="submit">Enviar</button>
+  <button type="button" (click)="cancelar()">Cancelar</button>
+  </p>
+</form>
+</div>
+
